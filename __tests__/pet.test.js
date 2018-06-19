@@ -31,3 +31,19 @@ describe('growUp', () => {
         expect(pet.fitness).toEqual(3);
     })
 });
+
+describe('walk', () => {
+    it('increments fitness by 4 but doesnt go over 10', () => {
+        const pet = new Pet('Fido');
+        pet.growUp();
+        pet.growUp();
+        pet.walk();
+        expect(pet.fitness).toEqual(8);
+    })
+    it('increments fitness by 4 but doesnt go over 10', () => {
+        const pet = new Pet('Fido');
+        pet.growUp();
+        pet.walk();
+        expect(pet.fitness).toEqual(10);
+    })
+})
